@@ -23,7 +23,7 @@ const useLocation = (): {country:string | null, isLoading:boolean,countryCode:st
       setIsLoading(true);
       try {
         const response = await fetch(
-          `http://api.geonames.org/countryCodeJSON?lat=${latitude}&lng=${longitude}&username=komkom`
+          `https://api.geonames.org/countryCodeJSON?lat=${latitude}&lng=${longitude}&username=komkom`
         );
         if (response.ok) {
           const data = await response.json();
