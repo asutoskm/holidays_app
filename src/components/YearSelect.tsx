@@ -6,7 +6,7 @@ interface IYearSelectprops {
 	onSelect: (select: number) => void;
 }
 export default function YearSelect(props: IYearSelectprops) {
-	const [ selectedYear, setSelectedYear ] = useState<number | null>(null);
+	const [ selectedYear, setSelectedYear ] = useState<number | null>(2022);
 
 	const handleYearChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		setSelectedYear(parseInt(event.target.value));
