@@ -2,7 +2,7 @@ import Autocomplete from '@/components/Autocomplete';
 import { HolidayContainer } from '@/components/HolidayContainer';
 import MonthSelector from '@/components/MonthSelect';
 import YearSelect from '@/components/YearSelect';
-import useLocation from '@/hooks/useLocation';
+import useLocation from '@/hook/useLocation';
 import * as React from 'react';
 
 export default function App() {
