@@ -39,7 +39,7 @@ const Autocomplete = (props: IAutocompleteProps) => {
         );
 
     return (
-        <div className='flex flex-col w-96'>
+        <div className='flex flex-col w-96  '>
             <div className='flex flex-col gap-1'>
                 <label className="text-black/40 ml-1">
                    Country*

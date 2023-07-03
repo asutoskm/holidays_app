@@ -27,7 +27,7 @@ export default function App() {
 	return (
 		<main className="w-screen h-screen  flex flex-col backdrop-blur-md bg-black/10 p-5">
 			<div className="flex flex-col gap-5 justify-center items-center w-full h-full">
-				<div className="flex gap-4  border border-black/10 rounded-lg px-4 py-2 bg-white items-end">
+				<div className="flex gap-4  border border-black/10 rounded-lg px-4 py-2 bg-white items-end ">
 					<Autocomplete onOptionClick={handleOnOptionClick} defaultcountry={country ? country : undefined} />
 					<YearSelect onSelect={handleOnYearSelect} />
 					<MonthSelector onSelect={handleOnMonthSelect} />
