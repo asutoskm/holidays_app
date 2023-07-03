@@ -5,13 +5,15 @@ type Location = {
   longitude: number | null;
   country: string | null;
   error: string | null;
+  countryCode:string | null;
 };
 
-const useLocation = (): {country:string | null, isLoading:boolean} => {
+const useLocation = (): {country:string | null, isLoading:boolean,countryCode:string | null} => {
   const [location, setLocation] = useState<Location>({
     latitude: null,
     longitude: null,
     country: null,
+    countryCode:null,
     error: null,
   });
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -28,6 +30,7 @@ const useLocation = (): {country:string | null, isLoading:boolean} => {
           setLocation((prevLocation) => ({
             ...prevLocation,
             country: data.countryName,
+            countryCode:data.countryCode,
             error: null,
           }));
         } else {
@@ -76,7 +79,7 @@ const useLocation = (): {country:string | null, isLoading:boolean} => {
     getLocation();
   }, []);
 
-  return {country:location.country, isLoading};
+  return {country:location.country,countryCode:location.countryCode, isLoading};
 };
 
 export default useLocation;

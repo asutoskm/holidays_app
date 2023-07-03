@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	transition: all 400ms;
+}
 body {
- 
+	background: url('https://source.unsplash.com/random/1024x567/?india') no-repeat center;
+	min-width: 100vw;
+	min-height: 100vh;
+	background-size: cover;
+	background-color: gray;
+}
+.box-shadow{
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
