@@ -1,4 +1,4 @@
-import useLocation from '@/Hooks/useLocation';
+import useLocation from '@/hooks/useLocation';
 import * as React from 'react';
 
 export interface IAppProps {
