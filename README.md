@@ -2,6 +2,9 @@
 
 This is a calendar application built using Nextjs and Typescript. It displays all the public holidays of a given year and country, with the option to specify the month as well. The application fetches real-time data from a calendar API (e.g. Open Holidays API).
 
+## Deployed At
+https://reliable-snickerdoodle-ab9d9a.netlify.app/
+
 ## Requirements
 Node.js (version X.X.X)
 NPM (version X.X.X)
