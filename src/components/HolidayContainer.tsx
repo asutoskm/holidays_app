@@ -19,7 +19,7 @@ if(isLoading){
   }
 if(error){
     return (<div>
-        Some thing went wrong
+        Something went wrong
     </div>)
 }
 return (
