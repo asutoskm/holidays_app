@@ -1,7 +1,9 @@
-import { HolidayContainer, IHolidayContainerProps } from "@/components/HolidayContainer";
+import {
+  HolidayContainer,
+  IHolidayContainerProps,
+} from "@/components/HolidayContainer";
 import { render } from "@testing-library/react";
 import { useQuery } from "react-query";
-
 
 jest.mock("react-query");
 

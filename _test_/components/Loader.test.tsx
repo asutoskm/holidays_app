@@ -1,17 +1,17 @@
-import React from 'react';
-import { render, screen, within } from '@testing-library/react';
+import React from "react";
+import { render, screen, within } from "@testing-library/react";
 import { Loader } from "@/components/Loader";
 
-describe('Loader component', () => {
-  test('should render', () => {
+describe("Loader component", () => {
+  test("should render", () => {
     render(<Loader />);
-    const loader = screen.getByTestId('loader');
+    const loader = screen.getByTestId("loader");
     expect(loader).toBeInTheDocument();
   });
 
-  test('should apply custom className', () => {
+  test("should apply custom className", () => {
     render(<Loader className="custom-loader" />);
-    const loader = screen.getByTestId('loader');
-    expect(loader).toHaveClass('custom-loader');
+    const loader = screen.getByTestId("loader");
+    expect(loader).toHaveClass("custom-loader");
   });
 });

@@ -1,19 +1,23 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 type Location = {
   latitude: number | null;
   longitude: number | null;
   country: string | null;
   error: string | null;
-  countryCode:string | null;
+  countryCode: string | null;
 };
 
-const useLocation = (): {country:string | null, isLoading:boolean,countryCode:string | null} => {
+const useLocation = (): {
+  country: string | null;
+  isLoading: boolean;
+  countryCode: string | null;
+} => {
   const [location, setLocation] = useState<Location>({
     latitude: null,
     longitude: null,
     country: null,
-    countryCode:null,
+    countryCode: null,
     error: null,
   });
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -30,16 +34,16 @@ const useLocation = (): {country:string | null, isLoading:boolean,countryCode:st
           setLocation((prevLocation) => ({
             ...prevLocation,
             country: data.countryName,
-            countryCode:data.countryCode,
+            countryCode: data.countryCode,
             error: null,
           }));
         } else {
-          throw new Error('Failed to fetch country');
+          throw new Error("Failed to fetch country");
         }
       } catch (error) {
         setLocation((prevLocation) => ({
           ...prevLocation,
-          error: 'someting went wrong',
+          error: "someting went wrong",
         }));
       } finally {
         setIsLoading(false);
@@ -70,7 +74,7 @@ const useLocation = (): {country:string | null, isLoading:boolean,countryCode:st
       } else {
         setLocation((prevLocation) => ({
           ...prevLocation,
-          error: 'Geolocation is not supported',
+          error: "Geolocation is not supported",
         }));
         setIsLoading(false);
       }
@@ -79,7 +83,11 @@ const useLocation = (): {country:string | null, isLoading:boolean,countryCode:st
     getLocation();
   }, []);
 
-  return {country:location.country,countryCode:location.countryCode, isLoading};
+  return {
+    country: location.country,
+    countryCode: location.countryCode,
+    isLoading,
+  };
 };
 
 export default useLocation;
