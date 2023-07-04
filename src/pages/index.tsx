@@ -6,7 +6,7 @@ import useLocation from "@/hook/useLocation";
 import * as React from "react";
 
 export default function App() {
-  const { country, isLoading, countryCode } = useLocation();
+  const { country, countryCode } = useLocation();
   const [selectedCountryCode, setSelectedCountryCode] = React.useState<
     string | null
   >(null);

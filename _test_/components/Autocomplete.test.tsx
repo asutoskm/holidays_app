@@ -2,12 +2,6 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import Autocomplete, { IAutocompleteProps } from "@/components/Autocomplete";
 
-const options = {
-  US: "United States",
-  CA: "Canada",
-  MX: "Mexico",
-};
-
 describe("Autocomplete", () => {
   let props: IAutocompleteProps;
   let onOptionClick: jest.Mock;
